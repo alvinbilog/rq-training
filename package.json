@@ -6,12 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "dev:both": "concurrently \"npm run dev\" \"npx json-server -w ./data/db.json -p 3500\""
   },
   "dependencies": {
+    "@tanstack/react-query": "^4.29.7",
     "@types/node": "20.2.3",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
+    "concurrently": "^8.0.1",
     "next": "13.4.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
